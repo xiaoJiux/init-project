@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* 公共样式 */
+
+* {
+  box-sizing: border-box;
+  font-weight: normal;
+}
+*::after,
+*::before{
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  font-weight: normal;
+  content: '';
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+form,
+button,
+input,
+select,
+ul,
+ol,
+dl,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  /*font-size: .2rem;*/
+  font-family: PingFang SC-Regular, PingFang SC, sans-serif;
+  /* 修正移动设备字体变化 */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  min-height: 100vh;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+  background: transparent; /* 修正win8系统IE连接灰色背景 */
+}
+
+a:active {
+  text-decoration: none;
+  outline: 0;
+}
+
+/* 去掉点击链接时的虚线外框 */
+a:focus {
+  outline-style: none;
+  -moz-outline-style: none;
+}
+
+img {
+  border: 0;
+  display: block;
+  width: 100%;
+  pointer-events: none;
+  -ms-interpolation-mode: bicubic; /* ie7 解决图片缩放失真问题 */
+}
+
+p,
+span {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+/** 去掉input默认样式 **/
+
+input {
+  border: none;
+  outline: none;
+}
+
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+input[type=search]::-ms-clear {
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+}
